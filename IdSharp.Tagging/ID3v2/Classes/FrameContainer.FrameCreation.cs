@@ -119,8 +119,10 @@ namespace IdSharp.Tagging.ID3v2
         private readonly TextFrame m_RecordingDates;
         private readonly TextFrame m_Subtitle;
         private readonly TextFrame m_AlbumSortOrder;
+        private readonly TextFrame m_AlbumArtistSortOrder;
         private readonly TextFrame m_ArtistSortOrder;
         private readonly TextFrame m_TitleSortOrder;
+        private readonly TextFrame m_ComposerSortOrder;
         private readonly TextFrame m_ProducedNotice;
         private readonly TextFrame m_SetSubtitle;
         private readonly TextFrame m_PodcastSeriesCategory;
@@ -265,10 +267,14 @@ namespace IdSharp.Tagging.ID3v2
             m_Subtitle = CreateTextFrame("TIT3", "TIT3", "TT3", "Subtitle", null);
             // Technically only supported in ID3v2.4, but some ID3v2.3 implementations use this frame
             m_AlbumSortOrder = CreateTextFrame("TSOA", "TSOA", null, "AlbumSortOrder", null);
+            // Non-standard iTunes frame
+            m_AlbumArtistSortOrder = CreateTextFrame("TSO2", "TSO2", null, "AlbumArtistSortOrder", null);
             // Technically only supported in ID3v2.4, but some ID3v2.3 implementations use this frame
             m_ArtistSortOrder = CreateTextFrame("TSOP", "TSOP", null, "ArtistSortOrder", null);
             // Technically only supported in ID3v2.4, but some ID3v2.3 implementations use this frame
             m_TitleSortOrder = CreateTextFrame("TSOT", "TSOT", null, "TitleSortOrder", null);
+            // Non-standard iTunes frame
+            m_ComposerSortOrder = CreateTextFrame("TSOC", "TSOC", null, "ComposerSortOrder", null);
             // Technically only supported in ID3v2.4, but some ID3v2.3 implementations use this frame
             m_ProducedNotice = CreateTextFrame("TPRO", "TPRO", null, "ProducedNotice", null/*todo - same as copyright validation*/);
             // Technically only supported in ID3v2.4, but some ID3v2.3 implementations use this frame

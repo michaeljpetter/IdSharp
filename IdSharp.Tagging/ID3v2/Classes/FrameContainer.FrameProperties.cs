@@ -999,6 +999,17 @@ namespace IdSharp.Tagging.ID3v2
         }
 
         /// <summary>
+        /// Gets or sets the album artist sort order, which defines a string which should be used
+        /// instead of the album artist name for sorting purposes.  Non-standard iTunes frame - TSO2.
+        /// </summary>
+        /// <value>The album artist sort order.</value>
+        public string AlbumArtistSortOrder
+        {
+            get { return m_AlbumArtistSortOrder.Value; }
+            set { m_AlbumArtistSortOrder.Value = value; }
+        }
+
+        /// <summary>
         /// Gets or sets the artist sort order, which defines a string which should be used
         /// instead of the artist name for sorting purposes.  Also known as 'Performer Sort Order'.
         /// Only supported in ID3v2.4.  TSOP in ID3v2.4.
@@ -1023,6 +1034,17 @@ namespace IdSharp.Tagging.ID3v2
         {
             get { return m_TitleSortOrder.Value; }
             set { m_TitleSortOrder.Value = value; }
+        }
+
+        /// <summary>
+        /// Gets or sets the composer sort order, which defines a string which should be used
+        /// instead of the composer name for sorting purposes.  Non-standard iTunes frame - TSOC.
+        /// </summary>
+        /// <value>The composer sort order.</value>
+        public string ComposerSortOrder
+        {
+            get { return m_ComposerSortOrder.Value; }
+            set { m_ComposerSortOrder.Value = value; }
         }
 
         /// <summary>
