@@ -98,7 +98,9 @@
     <Compile Include="ID3v2\Classes\ID3v2Tag.Static.cs" />
     <Compile Include="ID3v2\Extensions\ITextEncodingExtensions.cs" />
     <Compile Include="ID3v2\Interfaces\Frames\IPodcast.cs" />
+    <Compile Include="ID3v2\Classes\ID3v2TagFactory.cs" />
     <Compile Include="ID3v2\Interfaces\IID3v2Tag.cs" />
+    <Compile Include="ID3v2\Interfaces\IID3v2TagFactory.cs" />
     <Compile Include="Lyrics3\Lyrics3Tag.cs" />
     <Compile Include="Lyrics3\Lyrics3Tag.Static.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
